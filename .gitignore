@@ -1,0 +1,3 @@
+*.pyc
+build/
+keystone_bvoxextension.egg-info/
