@@ -2,11 +2,11 @@ Metadata-Version: 1.1
 Name: keystone-bvoxextension
 Version: 0.0.1
 Summary: BVOX's Keystone extension
-Home-page: http://www.bvox.net/
+Home-page: https://github.com/bvox/keystone-bvoxextension
 Author: Rafael Durán Castañeda
 Author-email: rafael@bvox.net
-License: UNKNOWN
-Description: UNKNOWN
+License: Public domain
+Description: BVOX extension for Openstack Keystone
 Platform: UNKNOWN
 Classifier: Programming Language :: Python
 Classifier: Development Status :: 4 - Beta
