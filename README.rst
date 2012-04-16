@@ -2,7 +2,8 @@ BVOX Keystone extension
 =======================
 BVOX extension for Openstack Keystone right now just implements a get_by_name
 API for both, the Keystone client and server. Ther server can be requested at
-"/users/by_name/{user_name}" admin API::
+"/users/by_name/{user_name}" once the extension is enabled on keystone.conf
+(a sample is provided at tools/keystone.conf) admin API::
 
    $ curl http://localhost:35357/v2.0/users/by_name/admin
 
