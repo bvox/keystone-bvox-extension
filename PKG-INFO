@@ -1,8 +1,8 @@
 Metadata-Version: 1.1
-Name: keystone-bvoxextension
+Name: bvoxextension
 Version: 0.0.1
 Summary: BVOX's Keystone extension
-Home-page: https://github.com/bvox/keystone-bvoxextension
+Home-page: https://github.com/bvox/keystone-bvox-extension
 Author: Rafael Durán Castañeda
 Author-email: rafael@bvox.net
 License: Public domain

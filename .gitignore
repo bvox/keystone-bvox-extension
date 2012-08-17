@@ -1,3 +1,5 @@
 *.pyc
 build/
 keystone_bvoxextension.egg-info/
+dist/
+bvoxextension.egg-info/

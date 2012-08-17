@@ -8,7 +8,7 @@ Provides setuptools needed script in order manage pip install
 
 .. module:: setup
     :synopsis: setuptools script
-    
+
 .. moduleauthor::Rafael Durán Castañeda <rafael@bvox.net>
 """
 import os
@@ -21,13 +21,14 @@ def read(fname):
 
 
 setup(
-    name = "keystone-bvoxextension",
+    name = "bvoxextension",
     packages = find_packages(),
+    install_requires = ('keystone',),
     version = bvoxextension.__version__,
     description = "BVOX's Keystone extension",
     author = "Rafael Durán Castañeda",
     author_email = "rafael@bvox.net",
-    url = "https://github.com/bvox/keystone-bvoxextension",
+    url = "https://github.com/bvox/keystone-bvox-extension",
     keywords = ["Openstack", "Keystone", "API", "Extension"],
     classifiers = [
         "Programming Language :: Python",

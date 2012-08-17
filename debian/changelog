@@ -1,0 +1,6 @@
+bvoxextension (0.0.1-1) precise; urgency=low
+
+  * source package automatically created by stdeb 0.6.0+git
+  * initial release
+
+ -- Rafael Durán Castañeda <rafael@bvox.net>  Thu, 16 Aug 2012 10:11:05 +0200
