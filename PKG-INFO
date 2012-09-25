@@ -3,6 +3,7 @@ Name: bvoxextension
 Version: 0.0.1
 Summary: BVOX's Keystone extension
 Home-page: https://github.com/bvox/keystone-bvox-extension
+Download-URL: https://github.com/bvox/keystone-bvox-extension/tarball/0.0.1
 Author: Rafael Durán Castañeda
 Author-email: rafael@bvox.net
 License: Public domain

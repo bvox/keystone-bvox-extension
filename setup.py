@@ -15,6 +15,7 @@ import os
 import bvoxextension
 from setuptools import setup, find_packages
 
+GITHUB_URL = 'https://github.com/bvox/keystone-bvox-extension'
 
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
@@ -28,7 +29,8 @@ setup(
     description = "BVOX's Keystone extension",
     author = "Rafael Durán Castañeda",
     author_email = "rafael@bvox.net",
-    url = "https://github.com/bvox/keystone-bvox-extension",
+    url = GITHUB_URL,
+    download_url = "%s/tarball/%s" % (GITHUB_URL, bvoxextension.__version__),
     keywords = ["Openstack", "Keystone", "API", "Extension"],
     classifiers = [
         "Programming Language :: Python",
