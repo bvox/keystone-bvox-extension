@@ -185,5 +185,5 @@ readable. Follow these guidelines:
 For further information on constructing high quality commit messages,
 and how to split up commits into a series of changes, consult:
 
-   http://wiki.openstack.org/GitCommitMessages
-   http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
+http://wiki.openstack.org/GitCommitMessages
+http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
