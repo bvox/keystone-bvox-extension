@@ -1,3 +1,4 @@
+'''BVOX extension controller.'''
 # vim: tabstop=4 shiftwidth=4 softtabstop=4
 
 from keystone import exception

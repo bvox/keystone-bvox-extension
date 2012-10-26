@@ -1,3 +1,4 @@
+'''BVOX extension router, match BVOX endpoint.'''
 # vim: tabstop=4 shiftwidth=4 softtabstop=4
 
 from keystone.common import wsgi
@@ -12,13 +13,16 @@ class BvoxExtension(wsgi.ExtensionRouter):
     """
 
     def add_routes(self, mapper):
+        '''Add our endpoints to Keystone.'''
         bvox_controller = core.BvoxController()
 
         # User operations
-        mapper.connect('/BVOX/users', controller=bvox_controller,
-                action='get_user',
-                conditions=dict(method=['GET']))
+        mapper.connect('/BVOX/users',
+                       controller=bvox_controller,
+                       action='get_user',
+                       conditions=dict(method=['GET']))
         # Tenant operations
-        mapper.connect('/BVOX/tenants', controller=bvox_controller,
-                action='get_tenant',
-                conditions=dict(method=['GET']))
+        mapper.connect('/BVOX/tenants',
+                       controller=bvox_controller,
+                       action='get_tenant',
+                       conditions=dict(method=['GET']))
