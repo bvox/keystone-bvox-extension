@@ -15,6 +15,10 @@ class BvoxExtension(wsgi.ExtensionRouter):
         bvox_controller = core.BvoxController()
 
         # User operations
-        mapper.connect('/users/by_name/{user_name}', controller=bvox_controller,
-                action='get_user_by_name',
+        mapper.connect('/BVOX/users', controller=bvox_controller,
+                action='get_user',
+                conditions=dict(method=['GET']))
+        # Tenant operations
+        mapper.connect('/BVOX/tenants', controller=bvox_controller,
+                action='get_tenant',
                 conditions=dict(method=['GET']))

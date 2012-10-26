@@ -5,7 +5,8 @@ API for both, the Keystone client and server. The server can be requested at
 "/users/by_name/{user_name}" once the extension is enabled editing keystone.conf
 (a sample is provided at tools/keystone.conf) admin API::
 
-   $ curl http://localhost:35357/v2.0/users/by_name/admin
+   $ curl http://localhost:35357/v2.0/BVOX/users?name=admin
+   $ curl http://localhost:35357/v2.0/BVOX/tenants?name=admin
 
 In order to use the client a monkey patch is provided::
 

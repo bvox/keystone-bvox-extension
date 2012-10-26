@@ -1,3 +1,3 @@
 # vim: tabstop=4 shiftwidth=4 softtabstop=4
-
-__version__ = '0.0.1'
+'''OpenStack Keystone BVOX extension.'''
+__version__ = '0.0.2'
