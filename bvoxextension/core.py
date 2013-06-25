@@ -27,7 +27,7 @@ class BvoxController(wsgi.Application):
             target='querystring')
 
     def _get_user_by_name(self, context, user_name):
-        user_ref = self.identity_api.get_user_by_name(context, user_name)
+        user_ref = self.identity_api.get_user_by_name(context, user_name, 'default')
 
         if not user_ref:
             raise UserNotFound(user_name=user_name)
@@ -38,17 +38,17 @@ class BvoxController(wsgi.Application):
         self.assert_admin(context)
         tenant_name = context['query_string'].get('name')
         if tenant_name:
-            return self._get_tenant_by_name(context, tenant_name)
+            return self._get_project_by_name(context, tenant_name)
 
         raise exception.ValidationError(
             attribute='name filter',
             target='querystring')
 
     def _get_tenant_by_name(self, context, tenant_name):
-        tenant_ref = self.identity_api.get_tenant_by_name(context, tenant_name)
+        tenant_ref = self.identity_api.get_project_by_name(context, tenant_name)
 
         if not tenant_ref:
-            raise TenantNotFound(tenant_name=tenant_name)
+            raise ProjectNotFound(tenant_name=tenant_name)
         return {'tenant': tenant_ref}
 
 
@@ -56,5 +56,5 @@ class UserNotFound(exception.NotFound):
     """Could not find user by name: %(user_name)s"""
 
 
-class TenantNotFound(exception.NotFound):
-    """Could not find tenant by name: %(tenant_name)s"""
+class ProjectNotFound(exception.NotFound):
+    """Could not find project by name: %(tenant_name)s"""
