@@ -1,3 +1,9 @@
+bvoxextension (0.0.3-1) precise; urgency=low
+
+  * support keystone grizzly internal api
+
+ -- Pedro Perez <pedro@bvox.net>  Tue, 25 Jun 2013 12:57:17 +0200
+
 bvoxextension (0.0.2-1) precise; urgency=low
 
   * Source update
