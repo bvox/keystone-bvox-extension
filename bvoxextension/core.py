@@ -6,6 +6,7 @@ from keystone import identity
 from keystone import policy
 from keystone import token
 from keystone.common import wsgi
+from keystone.identity.controllers import DEFAULT_DOMAIN_ID
 
 
 class BvoxController(wsgi.Application):
@@ -27,7 +28,7 @@ class BvoxController(wsgi.Application):
             target='querystring')
 
     def _get_user_by_name(self, context, user_name):
-        user_ref = self.identity_api.get_user_by_name(context, user_name, 'default')
+        user_ref = self.identity_api.get_user_by_name(user_name, DEFAULT_DOMAIN_ID)
 
         if not user_ref:
             raise UserNotFound(user_name=user_name)
@@ -45,7 +46,7 @@ class BvoxController(wsgi.Application):
             target='querystring')
 
     def _get_tenant_by_name(self, context, tenant_name):
-        tenant_ref = self.identity_api.get_project_by_name(context, tenant_name)
+        tenant_ref = self.identity_api.get_project_by_name(tenant_name, DEFAULT_DOMAIN_ID)
 
         if not tenant_ref:
             raise ProjectNotFound(tenant_name=tenant_name)

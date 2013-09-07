@@ -1,3 +1,9 @@
+bvoxextension (0.0.4-1ubuntu1) precise; urgency=low
+
+  * Fix identity api call
+
+ -- Pedro Perez <pedro@bvox.net>  Sat, 07 Sep 2013 10:59:57 +0200
+
 bvoxextension (0.0.3-1) precise; urgency=low
 
   * support keystone grizzly internal api
